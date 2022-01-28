@@ -27,7 +27,7 @@ class Proposal(models.Model):
     student = models.ManyToManyField(Student, blank=False, null=False)
     semester = models.CharField(max_length=3) # e.g:'اول' یا 'دوم'
     academic_year = models.CharField(max_length=4) # e.g:'1400'
-    summary = models.TextField(null=False, help_text="مختصر اطلاعاتی درباره پروژه")
+    summary = models.TextField(null=False, help_text="مختصر اطلاعاتی درباره پروپزال")
     status = models.CharField(max_length=4, choices=STATUS_CHOICES, default='pen')
     message = models.ForeignKey(Message, on_delete=models.DO_NOTHING)
 
