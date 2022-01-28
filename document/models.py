@@ -31,4 +31,7 @@ class Proposal(models.Model):
     status = models.CharField(max_length=4, choices=STATUS_CHOICES, default='pen')
     message = models.ForeignKey(Message, on_delete=models.DO_NOTHING)
 
+    def __str__(self):
+        return self.title
+
 
