@@ -24,7 +24,7 @@ class Proposal(models.Model):
 
     title = models.CharField(max_length=100)
     supervisor = models.ForeignKey(Supervisor, on_delete=models.DO_NOTHING)
-    student = models.ManyToManyField(Student, blank=False, null=False)
+    student = models.ManyToManyField(Student, blank=False)
     semester = models.CharField(max_length=3) # e.g:'اول' یا 'دوم'
     academic_year = models.CharField(max_length=4) # e.g:'1400'
     summary = models.TextField(null=False, help_text="مختصر اطلاعاتی درباره پروپزال")
