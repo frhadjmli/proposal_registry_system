@@ -1,0 +1,89 @@
+.req-lec {
+    background-color: #1C2126;
+    color: white;
+}
+.req-ops{
+    background-color: #1C2126;
+    color: white;
+    padding: 3%;
+}
+
+.opt-btn{
+    margin: 10%;
+    width: 80%;
+    padding: 1%;
+    height: 45px;
+    border-radius: 35px;
+    text-align: center;
+    color: #18B4C2;
+    border: 2px solid #18B4C2;
+    background: #1b1b1b;
+    align-items: baseline;
+    align-content: baseline;
+}
+
+.opt-btn2{
+    margin: 5%;
+    width: 90%;
+    padding: 1%;
+    height: 55px;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    border: 2px solid #18B4C2;
+    background: #18B4C2;
+    align-items: baseline;
+    align-content: baseline;
+}
+
+.opt-btn:hover{
+    color: #1b1b1b;
+    background: #18B4C2;
+}
+
+.names{
+    padding: 2%;
+}
+
+.nav-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 8%;
+  background-color: #0F8881;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+svg{
+    width: 90%;
+}
+
+.nav-a {
+  padding: 10%;
+  width: 100%;
+  display: block;
+  color: #1D2228;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.nav-a:hover {
+  background-color: #1D2228;
+  color: #0F8881;
+}
+
+.btn-styl{
+    width: 100%;
+    padding: 30%;
+    border: 2px solid #0F8881;
+    background: #1D2228;
+    border-radius: 30px;
+}
+
+.btn-styl svg{
+    width: 30%;
+    color: #0F8881;
+}
+
