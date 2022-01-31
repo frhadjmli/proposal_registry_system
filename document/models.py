@@ -29,7 +29,7 @@ class Proposal(models.Model):
     academic_year = models.CharField(max_length=4) # e.g:'1400'
     summary = models.TextField(null=False, help_text="مختصر اطلاعاتی درباره پروپزال")
     status = models.CharField(max_length=4, choices=STATUS_CHOICES, default='pen')
-    message = models.ForeignKey(Message, on_delete=models.DO_NOTHING)
+    message = models.ForeignKey(Message, null=True, default= None, on_delete=models.DO_NOTHING)
 
     def __str__(self):
         return self.title
