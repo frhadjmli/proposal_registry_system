@@ -34,6 +34,9 @@ class Supervisor(models.Model):
     def __str__(self):
         return self.user.get_full_name()
 
+    def full_name(self):
+        return self.user.get_full_name()
+
 
 class HOD(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)

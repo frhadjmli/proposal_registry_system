@@ -30,7 +30,7 @@ class ProposalInline(admin.StackedInline):
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
 
-    list_display = ('id', 'full_name', 'std_number', 'field', 'taken_unit', 'passed_unit',)
+    list_display = ('user_id', 'full_name', 'std_number', 'field', 'taken_unit', 'passed_unit',)
     sortable_by = ('std_number',)
     search_fields = ('std_number',)
 
@@ -38,7 +38,7 @@ class StudentAdmin(admin.ModelAdmin):
 @admin.register(Supervisor)
 class SupervisorAdmin(admin.ModelAdmin):
 
-    list_display = ('id', 'user', 'academic_rank', 'working_area',)
+    list_display = ('user_id', 'full_name', 'user', 'academic_rank', 'working_area',)
     sortable_by = ('academic_rank',)
     inlines = (ProposalInline,)
 
