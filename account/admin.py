@@ -29,7 +29,8 @@ class ProposalInline(admin.StackedInline):
 
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'std_number', 'field', 'taken_unit', 'passed_unit',)
+
+    list_display = ('id', 'full_name', 'std_number', 'field', 'taken_unit', 'passed_unit',)
     sortable_by = ('std_number',)
     search_fields = ('std_number',)
 

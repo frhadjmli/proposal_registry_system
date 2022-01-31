@@ -16,6 +16,9 @@ class Student(models.Model):
     def __str__(self):
         return f"{self.user.get_full_name()} std_number : {self.std_number}"
 
+    def full_name(self):
+        return self.user.get_full_name()
+
 
 class Supervisor(models.Model):
     class WorkingArea(models.TextChoices):
