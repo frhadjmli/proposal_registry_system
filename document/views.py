@@ -1,23 +1,28 @@
+"""this file handles all the logic around proposal
+'submit_proposal(request)' is responsible for showing the proposal form to the student and also
+get all the data and save it in DB."""
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from document.models import Proposal
 from django.views.decorators.csrf import csrf_exempt
+from document.forms import ProposalForm
 
 # Create your views here.
 def submit_proposal(request):
+    if request.method == 'GET':
+        form = ProposalForm()
+        return render(request, 'xxx.html', {'form':form}) # xxx.html should replace with real one
     if request.method == 'POST':
         try:
-            proposal = Proposal()
-            proposal.title = request.POST.get('...')
-            proposal.supervisor = request.POST.get('...')
-            proposal.student = request.POST.get('...')
-            proposal.semester = request.POST.get('...')
-            proposal.academic_year = request.POST.get('...')
-            proposal.summary = request.POST.get('...')
-            proposal.message = None
-            proposal.save()
-            response = "Proposal added Successfuly to database."
-            return HttpResponse(response)
+            form = ProposalForm(request.POST)
+            if form.is_valid():
+                form.save()
+                response = "Proposal added Successfuly to database."
+                return HttpResponse(response)
+            else:
+                response = "Proposal form is not valid!"
+                return HttpResponse(response)
         except:
             response = "Proposal failed to add in database!"
             return HttpResponse(response)
