@@ -1,0 +1,25 @@
+{% extends 'account/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="login-page" style="text-align: center;">
+        <div class="login-form">
+            <div class="img-box">
+                <img src="{% static "account/logo.png" %}" style="width: 100%;">
+            </div>
+            <br><br>
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="نام کاربری">
+                <br>
+                <input type="text" name="password" placeholder="رمز عبور">
+                <br>
+
+                <button type="submit"> ورود </button>
+                <div>
+                    <label name="msg">{{ msg }}</label>
+                </div>
+
+            </form>
+        </div>
+    </div>
+{% endblock %}
