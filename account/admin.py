@@ -19,7 +19,7 @@ class UserAdmin(DefaultUserAdmin):
         ('Important dates', {'fields': ('last_login', 'date_joined',)}),
     )
     list_filter = ('is_staff', 'is_superuser', 'is_active', 'groups',)
-    list_display = ('username', 'email', 'first_name', 'last_name', 'is_staff', 'is_active',)
+    list_display = ('username', 'email', 'first_name', 'last_name', 'is_staff', 'is_active', 'user_type',)
     list_editable = ('is_staff', 'is_active',)
 
 
