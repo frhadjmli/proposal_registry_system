@@ -1,0 +1,66 @@
+{% extends 'document/base.html' %}
+{% load static %}
+{% block content %}
+    <div style="text-align: center" class="main-bg">
+
+        <h3>
+            نمایش پروپوزال
+        </h3>
+
+        <br>
+
+        {% for i in list %}
+            {% if var1 %}
+                <div class="p-title">
+
+                </div>
+            {% elif var2 %}
+                 <div class="p-paragraph">
+
+                 </div>
+            {% elif var3 %}
+                 <div class="p-image">
+
+                 </div>
+            {% endif %}
+        {% endfor %}
+
+        <div class="p-title">
+            <h3>
+                عنوان 1
+            </h3>
+        </div>
+        <div class="p-paragraph">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent metus erat, fringilla nec ex id, rhoncus gravida erat. Aenean placerat arcu a magna laoreet volutpat. Donec gravida dignissim odio, a tincidunt tellus convallis in. Nam auctor suscipit ex, et laoreet diam tempor a. Etiam eget enim volutpat, tristique nisi non, suscipit dolor.
+            </p>
+        </div>
+        <div class="p-title">
+            <h3>
+                عنوان 2
+            </h3>
+        </div>
+        <div class="p-paragraph">
+            <p>
+                    Maecenas dignissim iaculis elementum. Suspendisse luctus ligula a sem interdum, eu feugiat arcu eleifend. Proin rhoncus rutrum arcu, at finibus turpis facilisis at. Fusce ultricies turpis et mauris volutpat, a volutpat magna venenatis. Cras nec purus consequat, volutpat velit id, fermentum eros. Nullam vel mattis odio. Vestibulum et ullamcorper magna, sit amet porttitor lacus. Nullam nibh risus, luctus ut laoreet euismod, consectetur non nisi. Aenean iaculis commodo odio, a accumsan nibh commodo non. Nam metus dolor, ornare a interdum at, eleifend vitae est. Praesent eget nunc enim. Quisque in vulputate sem. Morbi interdum, neque hendrerit vehicula sollicitudin, turpis massa feugiat metus, a ullamcorper turpis nunc ut nulla. Cras dignissim posuere risus, vitae condimentum velit rhoncus eu.
+            </p>
+        </div>
+
+        <div class="p-image">
+
+        </div>
+
+        {% if var1 %}
+            <button class="maker-btn">
+              submit proposal
+            </button>
+        {% else %}
+
+        {% endif %}
+    <br>
+        <button class="maker-btn">
+              submit proposal
+         </button>
+
+    </div>
+{% endblock %}
