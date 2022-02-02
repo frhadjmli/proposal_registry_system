@@ -9,4 +9,4 @@ class ProposalForm(forms.ModelForm):
     class Meta:
         model = Proposal
         fields = ('title', 'supervisor', 'student', 'semester', 
-        'academic_year', 'summary') # did not mention 'message' and 'status' because those are irrelevant
+        'academic_year', 'summary') # did not mention 'status' because those are irrelevant
