@@ -3,7 +3,23 @@ from django.db import models
 
 
 class User(AbstractUser):
-    pass
+    class UserTypeChoice(models.TextChoices):
+        student = 'ST', 'student'
+        supervisor = 'SU', 'supervisor'
+        HOD = 'HOD', 'HeadOfDepartment'
+        DprtAdmin = 'DA', 'DepartmentAdmin'
+        admin = 'A', 'admin'
+
+    user_type = models.CharField(max_length=3, choices=UserTypeChoice.choices, null=True, blank=True)
+
+    def __str__(self):
+        return self.username
+
+    def get_user_type(self):
+        return self.user_type
+
+    def s(self):
+        self.st
 
 
 class Student(models.Model):
