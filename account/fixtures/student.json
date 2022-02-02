@@ -1,0 +1,167 @@
+[
+  {
+    "model": "account.student",
+    "pk": 1,
+    "fields":{
+      "user": 1,
+      "std_number": "97463101",
+      "field": "computer engineering",
+      "taken_unit": 85,
+      "passed_unit": 75
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 2,
+    "fields":{
+      "user": 2,
+      "std_number": "97463102",
+      "field": "computer engineering",
+      "taken_unit": 105,
+      "passed_unit": 100
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 3,
+    "fields":{
+      "user": 3,
+      "std_number": "97463103",
+      "field": "computer engineering",
+      "taken_unit": 59,
+      "passed_unit": 59
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 4,
+    "fields":{
+      "user": 4,
+      "std_number": "97463104",
+      "field": "computer engineering",
+      "taken_unit": 65,
+      "passed_unit": 55
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 5,
+    "fields":{
+      "user": 5,
+      "std_number": "97463105",
+      "field": "computer engineering",
+      "taken_unit": 94,
+      "passed_unit": 90
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 6,
+    "fields":{
+      "user": 6,
+      "std_number": "97463106",
+      "field": "computer engineering",
+      "taken_unit": 60,
+      "passed_unit": 52
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 7,
+    "fields":{
+      "user": 7,
+      "std_number": "97463107",
+      "field": "computer engineering",
+      "taken_unit": 79,
+      "passed_unit": 75
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 8,
+    "fields":{
+      "user": 8,
+      "std_number": "97463108",
+      "field": "computer engineering",
+      "taken_unit": 52,
+      "passed_unit": 52
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 9,
+    "fields":{
+      "user": 9,
+      "std_number": "97463109",
+      "field": "computer engineering",
+      "taken_unit": 48,
+      "passed_unit": 44
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 10,
+    "fields":{
+      "user": 10,
+      "std_number": "97463110",
+      "field": "computer engineering",
+      "taken_unit": 116,
+      "passed_unit": 100
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 11,
+    "fields":{
+      "user": 11,
+      "std_number": "97463111",
+      "field": "computer engineering",
+      "taken_unit": 127,
+      "passed_unit": 125
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 12,
+    "fields":{
+      "user": 12,
+      "std_number": "97463112",
+      "field": "computer engineering",
+      "taken_unit": 115,
+      "passed_unit": 100
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 13,
+    "fields":{
+      "user": 13,
+      "std_number": "97463113",
+      "field": "computer engineering",
+      "taken_unit": 95,
+      "passed_unit": 92
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 14,
+    "fields":{
+      "user": 14,
+      "std_number": "97463114",
+      "field": "computer engineering",
+      "taken_unit": 104,
+      "passed_unit": 10
+    }
+  },
+  {
+    "model": "account.student",
+    "pk": 15,
+    "fields":{
+      "user": 15,
+      "std_number": "97463115",
+      "field": "computer engineering",
+      "taken_unit": 91,
+      "passed_unit": 90
+    }
+  }
+]

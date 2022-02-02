@@ -1,0 +1,38 @@
+[
+  {
+    "model": "account.supervisor",
+    "pk": 1,
+    "fields":{
+      "user": 16,
+      "academic_rank": "FP",
+      "working_area": null
+    }
+  },
+  {
+    "model": "account.supervisor",
+    "pk": 2,
+    "fields":{
+      "user": 17,
+      "academic_rank": "AiP",
+      "working_area": null
+    }
+  },
+  {
+    "model": "account.supervisor",
+    "pk": 3,
+    "fields":{
+      "user": 18,
+      "academic_rank": "AoP",
+      "working_area": null
+    }
+  },
+  {
+    "model": "account.supervisor",
+    "pk": 4,
+    "fields":{
+      "user": 19,
+      "academic_rank": "AoP",
+      "working_area": null
+    }
+  }
+]

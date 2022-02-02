@@ -1,0 +1,9 @@
+[
+  { 
+    "model": "account.hod",
+    "pk": 1,
+    "fields":{
+      "user": 20
+    }
+  }
+]

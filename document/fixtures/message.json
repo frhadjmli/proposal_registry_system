@@ -1,0 +1,73 @@
+[{
+    "model": "document.message",
+    "pk": 1,
+    "fields": {
+      "title": null,
+      "sender": 1,
+      "text": "Nullam molestie nibh in lectus. Pellentesque at nulla.",
+      "proposal": 2
+    }
+  }, {
+    "model": "document.message",
+    "pk": 2,
+    "fields": {
+      "title": null,
+      "sender": 1,
+      "text": "Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+      "proposal": 5
+    }
+  }, {
+    "model": "document.message",
+    "pk": 3,
+    "fields": {
+      "title": null,
+      "sender": 1,
+      "text": "Duis consequat dui nec nisi volutpat eleifend.",
+      "proposal": 5
+    }
+  }, {
+    "model": "document.message",
+    "pk": 4,
+    "fields": {
+      "title": null,
+      "sender": 4,
+      "text": "Donec quis orci eget orci vehicula condimentum.",
+      "proposal": 2
+    }
+  }, {
+    "model": "document.message",
+    "pk": 5,
+    "fields": {
+      "title": null,
+      "sender": 1,
+      "text": "Duis mattis egestas metus. Aenean fermentum.",
+      "proposal": 5
+    }
+  }, {
+    "model": "document.message",
+    "pk": 6,
+    "fields": {
+      "title": null,
+      "sender": 3,
+      "text": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.",
+      "proposal": 7
+    }
+  }, {
+    "model": "document.message",
+    "pk": 7,
+    "fields": {
+      "title": null,
+      "sender": 3,
+      "text": "Donec dapibus. Duis at velit eu est congue elementum.",
+      "proposal": 6
+    }
+  }, {
+    "model": "document.message",
+    "pk": 8,
+    "fields": {
+      "title": null,
+      "sender": 4,
+      "text": "Donec ut mauris eget massa tempor convallis.",
+      "proposal": 4
+    }
+  }]

@@ -1,0 +1,262 @@
+[
+  {
+    "model": "account.user",
+    "pk": 1,
+    "fields":{
+      "username": "randraud0",
+      "first_name": "Rebeca",
+      "last_name": "Andraud",
+      "email": "randraud0@linkedin.com",
+      "is_staff": true,
+      "is_active": false,
+      "date_joined": "2021-07-11"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 2,
+    "fields":{
+      "username": "swrightem1",
+      "first_name": "Salim",
+      "last_name": "Wrightem",
+      "email": "swrightem1@cdc.gov",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2020-10-13"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 3,
+    "fields":{
+      "username": "aprivost2",
+      "first_name": "Aubrie",
+      "last_name": "Privost",
+      "email": "aprivost2@tuttocitta.it",
+      "is_staff": true,
+      "is_active": false,
+      "date_joined": "2018-05-01"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 4,
+    "fields":{
+      "username": "kaudenis3",
+      "first_name": "Klemens",
+      "last_name": "Audenis",
+      "email": "kaudenis3@instagram.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-04-04"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 5,
+    "fields":{
+      "username": "jmcamish4",
+      "first_name": "Jacquette",
+      "last_name": "McAmish",
+      "email": "jmcamish4@t-online.de",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-07-01"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 6,
+    "fields":{
+      "username": "nvlasin5",
+      "first_name": "Nicola",
+      "last_name": "Vlasin",
+      "email": "nvlasin5@mapy.cz",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-11-23"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 7,
+    "fields":{
+      "username": "dscholig6",
+      "first_name": "Danika",
+      "last_name": "Scholig",
+      "email": "dscholig6@walmart.com",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2019-05-06"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 8,
+    "fields":{
+      "username": "ereedshaw7",
+      "first_name": "Elsy",
+      "last_name": "Reedshaw",
+      "email": "ereedshaw7@time.com",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2018-03-24"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 9,
+    "fields":{
+      "username": "ckarlmann8",
+      "first_name": "Cynde",
+      "last_name": "Karlmann",
+      "email": "ckarlmann8@blinklist.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-03-31"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 10,
+    "fields":{
+      "username": "askellon9",
+      "first_name": "Adam",
+      "last_name": "Skellon",
+      "email": "askellon9@t-online.de",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-04-26"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 11,
+    "fields":{
+      "username": "lmcclorya",
+      "first_name": "Lacy",
+      "last_name": "McClory",
+      "email": "lmcclorya@guardian.co.uk",
+      "is_staff": true,
+      "is_active": false,
+      "date_joined": "2018-10-02"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 12,
+    "fields":{
+      "username": "mcauthrab",
+      "first_name": "Mile",
+      "last_name": "Cauthra",
+      "email": "mcauthrab@sun.com",
+      "is_staff": true,
+      "is_active": false,
+      "date_joined": "2018-02-16"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 13,
+    "fields":{
+      "username": "dpharoc",
+      "first_name": "Delmar",
+      "last_name": "Pharo",
+      "email": "dpharoc@aboutads.info",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-10-05"
+    } 
+  },
+  {
+    "model": "account.user",
+    "pk": 14,
+    "fields":{
+      "username": "mhatzd",
+      "first_name": "Michal",
+      "last_name": "Hatz",
+      "email": "mhatzd@rediff.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-09-22"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 15,
+    "fields":{
+      "username": "nfischere",
+      "first_name": "Nisse",
+      "last_name": "Fischer",
+      "email": "nfischere@elegantthemes.com",
+      "is_staff": true,
+      "is_active": false,
+      "date_joined": "2019-01-11"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 16,
+    "fields":{
+      "username": "fhortf",
+      "first_name": "Ford",
+      "last_name": "Hort",
+      "email": "fhortf@wufoo.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-05-15"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 17,
+    "fields":{
+      "username": "jmacnockaterg",
+      "first_name": "Jessy",
+      "last_name": "MacNockater",
+      "email": "jmacnockaterg@ning.com",
+      "is_staff": true,
+      "is_active": false,
+      "date_joined": "2021-05-19"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 18,
+    "fields":{
+      "username": "wlardinerh",
+      "first_name": "Wileen",
+      "last_name": "Lardiner",
+      "email": "wlardinerh@tripod.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-05-06"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 19,
+    "fields":{
+      "username": "arosei",
+      "first_name": "Annabela",
+      "last_name": "Rose",
+      "email": "arosei@amazonaws.com",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2019-03-07"
+    }
+  },
+  {
+    "model": "account.user",
+    "pk": 20,
+    "fields":{
+      "username": "bgregolettij",
+      "first_name": "Bette-ann",
+      "last_name": "Gregoletti",
+      "email": "bgregolettij@globo.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-08-28"
+    }
+  }
+]

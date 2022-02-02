@@ -1,0 +1,85 @@
+[{
+    "model": "document.proposal",
+    "pk": 1,
+    "fields": {
+      "title": "Pannier",
+      "supervisor": 1,
+      "student": [1, 2],
+      "semester": "دوم",
+      "academic_year": "1400",
+      "summary": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+      "status": "rhod"
+    }
+  }, {
+    "model": "document.proposal",
+    "pk": 2,
+    "fields": {
+      "title": "Konklux",
+      "supervisor": [1, 4],
+      "student": [3, 4],
+      "semester": "اول",
+      "academic_year": "1400",
+      "summary": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
+      "status": "ahod"
+    }
+  }, {
+    "model": "document.proposal",
+    "pk": 3,
+    "fields": {
+      "title": "Otcom",
+      "supervisor": 4,
+      "student": [5, 6],
+      "semester": "دوم",
+      "academic_year": "1400",
+      "summary": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+      "status": "ahod"
+    }
+  }, {
+    "model": "document.proposal",
+    "pk": 4,
+    "fields": {
+      "title": "Alpha",
+      "supervisor": [3, 4],
+      "student": [7, 8],
+      "semester": "اول",
+      "academic_year": "1400",
+      "summary": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+      "status": "rhod"
+    }
+  }, {
+    "model": "document.proposal",
+    "pk": 5,
+    "fields": {
+      "title": "Biodex",
+      "supervisor": 1,
+      "student": [9, 10, 11],
+      "semester": "اول",
+      "academic_year": "1400",
+      "summary": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+      "status": "asup"
+    }
+  }, {
+    "model": "document.proposal",
+    "pk": 6,
+    "fields": {
+      "title": "Rank",
+      "supervisor": 3,
+      "student": [12, 13, 14],
+      "semester": "اول",
+      "academic_year": "1400",
+      "summary": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "status": "rhod"
+    }
+  }, {
+    "model": "document.proposal",
+    "pk": 7,
+    "fields": {
+      "title": "Cardify",
+      "supervisor": [1, 3],
+      "student": 15,
+      "semester": "اول",
+      "academic_year": "1400",
+      "summary": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+      "status": "aadm"
+    }
+  }]
