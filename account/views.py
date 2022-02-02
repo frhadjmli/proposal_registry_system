@@ -7,13 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 """
 
 
-def login(request):
-    return render(request, "account/login.html")
-
-
-@csrf_exempt
-def student_profile(request):
-
+def login_user(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -22,26 +16,36 @@ def student_profile(request):
 
         if user is not None:
             login(request, user)
-            return render(request, 'account/student_profile.html')
-            # return redirect('??')
+            print()
+            if user.user_type == 'ST':
+                return redirect('student_profile')
+            elif user.user_type == 'SU':
+                return redirect('supervisor_profile')
+            elif user.user_type == 'HOD':
+                return redirect('hod_profile')
+            # elif user.user_type == 'DA' or 'A':
+            #     return redirect('logout') # admin should login http://127.0.0.1:8000/admin but dprtAdmin ??
+            else:
+                print("user_type is null")
+                return redirect('logout')
 
-        return HttpResponse('Wrong password/username')
-        # return render(request, 'login.html', {'msg': 'Wrong password/username'})
+        return render(request, 'account/login.html', {'msg': 'Wrong password/username'})
 
-    # return HttpResponse('Please login with post method')
+    return render(request, 'account/login.html')
+
+
+def student_profile(request):
     return render(request, 'account/student_profile.html')
 
 
-@csrf_exempt
-def logoutUser(request):
+def logout_user(request):
 
     if not request.user.is_authenticated:
-        return HttpResponse('Please login first')
-        # return redirect('login')
+        # return HttpResponse('Please login first')
+        return redirect('login')
 
     logout(request)
-    return HttpResponse('Logout successfully')
-    # return redirect('login')
+    return redirect('login')
 
 
 # با زدن دکمه ایجاد گروه به اینجا درخواست میزنیم
