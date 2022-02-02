@@ -30,7 +30,6 @@ class Message(models.Model):
 
     title = models.CharField(max_length=50, null=True)
     sender = models.ForeignKey(Supervisor, on_delete=models.DO_NOTHING)
-    receiver = models.ForeignKey(Student, on_delete=models.DO_NOTHING)
     text = models.TextField(null=True, help_text="پیام خود را وارد کنید.")
     proposal = models.ForeignKey(Proposal, on_delete=models.CASCADE)
 
