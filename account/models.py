@@ -56,12 +56,18 @@ class Supervisor(models.Model):
 class HOD(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name_plural = "HOD"
+
     def __str__(self):
         return self.user.get_full_name()
 
 
 class DprtAdmin(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name_plural = "DprtAdmin"
 
     def __str__(self):
         return self.user.get_full_name()
