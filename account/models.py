@@ -18,9 +18,6 @@ class User(AbstractUser):
     def get_user_type(self):
         return self.user_type
 
-    def s(self):
-        self.st
-
 
 class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
