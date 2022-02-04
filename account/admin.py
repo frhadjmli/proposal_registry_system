@@ -7,6 +7,23 @@ from document.models import Proposal
 
 @admin.register(User)
 class UserAdmin(DefaultUserAdmin):
+
+    def save_model(self, request, obj, form, change):
+
+        if request.POST.get('user_type') == 'DA':
+            obj.is_staff = True
+            obj.is_superuser = True
+        obj.save()
+
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('username', 'password1', 'password2', 'user_type')
+        }),
+        ('Personal info', {
+            'fields': ('first_name', 'last_name', 'email')
+        }),
+    )
     fieldsets = (
         (None, {'fields': ('username', 'password',)}),
         ('Personal info', {'fields': (
