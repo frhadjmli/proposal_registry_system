@@ -32,15 +32,16 @@ class Student(models.Model):
     def full_name(self):
         return self.user.get_full_name()
 
+
 class Supervisor(models.Model):
-    class WorkingArea(models.TextChoices):
+    class AcademicRankChoice(models.TextChoices):
         instructor = 'I', 'instructor'
         assistant_professor = 'AiP', 'assistant_professor'
         associate_professor = 'AoP', 'associate_professor'
         full_professor = 'FP', 'full_professor'
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    academic_rank = models.CharField(max_length=3, choices=WorkingArea.choices)
+    academic_rank = models.CharField(max_length=3, choices=AcademicRankChoice.choices)
     working_area = models.CharField(max_length=100, null=True)
 
     def __str__(self):
