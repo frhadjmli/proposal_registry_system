@@ -23,8 +23,8 @@ def login_user(request):
                 return redirect('supervisor_profile')
             elif user.user_type == 'HOD':
                 return redirect('hod_profile')
-            # elif user.user_type == 'DA' or 'A':
-            #     return redirect('logout') # admin should login http://127.0.0.1:8000/admin but dprtAdmin ??
+            elif user.user_type == 'DA':
+                return redirect('/admin/')  # redirect to admin panel
             else:
                 print("user_type is null")
                 return redirect('logout')
