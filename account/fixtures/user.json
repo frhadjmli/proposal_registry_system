@@ -4,9 +4,11 @@
     "pk": 1,
     "fields":{
       "username": "randraud0",
+      "password": "Shejpw0",
       "first_name": "Rebeca",
       "last_name": "Andraud",
       "email": "randraud0@linkedin.com",
+      "user_type": "ST",
       "is_staff": true,
       "is_active": false,
       "date_joined": "2021-07-11"
@@ -17,9 +19,11 @@
     "pk": 2,
     "fields":{
       "username": "swrightem1",
+      "password": "B5ioIJwhzX2",
       "first_name": "Salim",
       "last_name": "Wrightem",
       "email": "swrightem1@cdc.gov",
+      "user_type": "ST",
       "is_staff": false,
       "is_active": false,
       "date_joined": "2020-10-13"
@@ -30,9 +34,11 @@
     "pk": 3,
     "fields":{
       "username": "aprivost2",
+      "password": "SCYMyM7kCv",
       "first_name": "Aubrie",
       "last_name": "Privost",
       "email": "aprivost2@tuttocitta.it",
+      "user_type": "ST",
       "is_staff": true,
       "is_active": false,
       "date_joined": "2018-05-01"
@@ -43,9 +49,11 @@
     "pk": 4,
     "fields":{
       "username": "kaudenis3",
+      "password": "2zzxyb2u5S",
       "first_name": "Klemens",
       "last_name": "Audenis",
       "email": "kaudenis3@instagram.com",
+      "user_type": "ST",
       "is_staff": true,
       "is_active": true,
       "date_joined": "2020-04-04"
@@ -56,9 +64,11 @@
     "pk": 5,
     "fields":{
       "username": "jmcamish4",
+      "password": "lcA4OfwxtQ",
       "first_name": "Jacquette",
       "last_name": "McAmish",
       "email": "jmcamish4@t-online.de",
+      "user_type": "ST",
       "is_staff": false,
       "is_active": true,
       "date_joined": "2021-07-01"
@@ -69,9 +79,11 @@
     "pk": 6,
     "fields":{
       "username": "nvlasin5",
+      "password": "yfVNjB",
       "first_name": "Nicola",
       "last_name": "Vlasin",
       "email": "nvlasin5@mapy.cz",
+      "user_type": "ST",
       "is_staff": true,
       "is_active": true,
       "date_joined": "2020-11-23"
@@ -82,9 +94,11 @@
     "pk": 7,
     "fields":{
       "username": "dscholig6",
+      "password": "45kxeTz49oG",
       "first_name": "Danika",
       "last_name": "Scholig",
       "email": "dscholig6@walmart.com",
+      "user_type": "ST",
       "is_staff": false,
       "is_active": false,
       "date_joined": "2019-05-06"
@@ -95,9 +109,11 @@
     "pk": 8,
     "fields":{
       "username": "ereedshaw7",
+      "password": "KpDWva",
       "first_name": "Elsy",
       "last_name": "Reedshaw",
       "email": "ereedshaw7@time.com",
+      "user_type": "ST",
       "is_staff": false,
       "is_active": false,
       "date_joined": "2018-03-24"
@@ -108,9 +124,11 @@
     "pk": 9,
     "fields":{
       "username": "ckarlmann8",
+      "password": "kFfjeGZ2nI9",
       "first_name": "Cynde",
       "last_name": "Karlmann",
       "email": "ckarlmann8@blinklist.com",
+      "user_type": "ST",
       "is_staff": true,
       "is_active": true,
       "date_joined": "2019-03-31"
@@ -121,9 +139,11 @@
     "pk": 10,
     "fields":{
       "username": "askellon9",
+      "password": "stOfwjjp75I",
       "first_name": "Adam",
       "last_name": "Skellon",
       "email": "askellon9@t-online.de",
+      "user_type": "ST",
       "is_staff": true,
       "is_active": true,
       "date_joined": "2021-04-26"
@@ -134,9 +154,11 @@
     "pk": 11,
     "fields":{
       "username": "lmcclorya",
+      "password": "eZXvpZsIhD7P",
       "first_name": "Lacy",
       "last_name": "McClory",
       "email": "lmcclorya@guardian.co.uk",
+      "user_type": "ST",
       "is_staff": true,
       "is_active": false,
       "date_joined": "2018-10-02"
@@ -147,9 +169,11 @@
     "pk": 12,
     "fields":{
       "username": "mcauthrab",
+      "password": "4fz8npGuhlB",
       "first_name": "Mile",
       "last_name": "Cauthra",
       "email": "mcauthrab@sun.com",
+      "user_type": "ST",
       "is_staff": true,
       "is_active": false,
       "date_joined": "2018-02-16"
@@ -160,9 +184,11 @@
     "pk": 13,
     "fields":{
       "username": "dpharoc",
+      "password": "QRH14vAfmWO",
       "first_name": "Delmar",
       "last_name": "Pharo",
       "email": "dpharoc@aboutads.info",
+      "user_type": "ST",
       "is_staff": true,
       "is_active": true,
       "date_joined": "2020-10-05"
@@ -173,9 +199,11 @@
     "pk": 14,
     "fields":{
       "username": "mhatzd",
+      "password": "GHGXPCnVgRV",
       "first_name": "Michal",
       "last_name": "Hatz",
       "email": "mhatzd@rediff.com",
+      "user_type": "ST",
       "is_staff": false,
       "is_active": true,
       "date_joined": "2019-09-22"
@@ -186,9 +214,11 @@
     "pk": 15,
     "fields":{
       "username": "nfischere",
+      "password": "VamGZv",
       "first_name": "Nisse",
       "last_name": "Fischer",
       "email": "nfischere@elegantthemes.com",
+      "user_type": "ST",
       "is_staff": true,
       "is_active": false,
       "date_joined": "2019-01-11"
@@ -199,9 +229,11 @@
     "pk": 16,
     "fields":{
       "username": "fhortf",
+      "password": "o6VUHr",
       "first_name": "Ford",
       "last_name": "Hort",
       "email": "fhortf@wufoo.com",
+      "user_type": "SU",
       "is_staff": true,
       "is_active": true,
       "date_joined": "2019-05-15"
@@ -212,9 +244,11 @@
     "pk": 17,
     "fields":{
       "username": "jmacnockaterg",
+      "password": "LLThL4M",
       "first_name": "Jessy",
       "last_name": "MacNockater",
       "email": "jmacnockaterg@ning.com",
+      "user_type": "SU",
       "is_staff": true,
       "is_active": false,
       "date_joined": "2021-05-19"
@@ -225,9 +259,11 @@
     "pk": 18,
     "fields":{
       "username": "wlardinerh",
+      "password": "Xj209a3cMkkd",
       "first_name": "Wileen",
       "last_name": "Lardiner",
       "email": "wlardinerh@tripod.com",
+      "user_type": "SU",
       "is_staff": true,
       "is_active": true,
       "date_joined": "2021-05-06"
@@ -238,9 +274,11 @@
     "pk": 19,
     "fields":{
       "username": "arosei",
+      "password": "qZkiYKenb",
       "first_name": "Annabela",
       "last_name": "Rose",
       "email": "arosei@amazonaws.com",
+      "user_type": "SU",
       "is_staff": false,
       "is_active": false,
       "date_joined": "2019-03-07"
@@ -251,9 +289,11 @@
     "pk": 20,
     "fields":{
       "username": "bgregolettij",
+      "password": "gDDMU3NsBl",
       "first_name": "Bette-ann",
       "last_name": "Gregoletti",
       "email": "bgregolettij@globo.com",
+      "user_type": "HOD",
       "is_staff": false,
       "is_active": true,
       "date_joined": "2019-08-28"
