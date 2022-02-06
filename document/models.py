@@ -22,6 +22,12 @@ class Proposal(models.Model):
     academic_year = models.CharField(max_length=4) # e.g:'1400'
     summary = models.TextField(null=False, help_text="مختصر اطلاعاتی درباره پروپزال")
     status = models.CharField(max_length=4, choices=STATUS_CHOICES, default='pen')
+
+    def get_supervisors(self):
+        return "\n".join([superv.full_name() for superv in self.supervisor.all()])
+
+    def get_students(self):
+        return "\n".join([std.full_name() for std in self.student.all()])
    
     def __str__(self):
         return self.title
