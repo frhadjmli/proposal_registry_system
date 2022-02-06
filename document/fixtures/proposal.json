@@ -3,7 +3,7 @@
     "pk": 1,
     "fields": {
       "title": "Pannier",
-      "supervisor": 1,
+      "supervisor": [1],
       "student": [1, 2],
       "semester": "دوم",
       "academic_year": "1400",
@@ -27,7 +27,7 @@
     "pk": 3,
     "fields": {
       "title": "Otcom",
-      "supervisor": 4,
+      "supervisor": [4],
       "student": [5, 6],
       "semester": "دوم",
       "academic_year": "1400",
@@ -51,7 +51,7 @@
     "pk": 5,
     "fields": {
       "title": "Biodex",
-      "supervisor": 1,
+      "supervisor": [1],
       "student": [9, 10, 11],
       "semester": "اول",
       "academic_year": "1400",
@@ -63,7 +63,7 @@
     "pk": 6,
     "fields": {
       "title": "Rank",
-      "supervisor": 3,
+      "supervisor": [3],
       "student": [12, 13, 14],
       "semester": "اول",
       "academic_year": "1400",
@@ -76,7 +76,7 @@
     "fields": {
       "title": "Cardify",
       "supervisor": [1, 3],
-      "student": 15,
+      "student": [15],
       "semester": "اول",
       "academic_year": "1400",
       "summary": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
