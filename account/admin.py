@@ -40,8 +40,8 @@ class UserAdmin(DefaultUserAdmin):
     list_editable = ('is_staff', 'is_active',)
 
 
-class ProposalInline(admin.StackedInline):
-    model = Proposal
+# class ProposalInline(admin.StackedInline):
+#     model = Proposal
 
 
 @admin.register(Student)
@@ -57,7 +57,7 @@ class SupervisorAdmin(admin.ModelAdmin):
 
     list_display = ('user_id', 'full_name', 'user', 'academic_rank', 'working_area',)
     sortable_by = ('academic_rank',)
-    inlines = (ProposalInline,)
+    # inlines = (ProposalInline,)
 
 
 admin.site.register(HOD)
