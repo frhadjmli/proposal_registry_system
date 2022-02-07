@@ -1,7 +1,7 @@
 {% extends 'document/base.html' %}
 {% load static %}
 {% block content %}
-    <div style="text-align: center" class="main-bg">
+    <form style="text-align: center" class="main-bg" method="post" action="/your-url/" >
 
         <h3>
             ساخت پروپوزال
@@ -9,72 +9,35 @@
         <br>
 
         <div class="form-cmp">
-            <h6>
-                ساخت عنوان
-            </h6>
-            <input type="text" placeholder="...عنوان" style="text-align: right">
-            <button class="maker-btn">
-                ایجاد
-            </button>
+            <input type="text" placeholder="عنوان" style="text-align: right" name="title" required>
         </div>
         <br>
         <div class="form-cmp">
-            <h6>
-                ساخت پاراگراف
-            </h6>
-            <textarea style="width: 90%;margin: 1% 5%;border-radius: 25px;" rows="8"></textarea>
+            <input type="text" placeholder="نام استاد راهنما" style="text-align: right" name="supervisor" value="{{ supervisor }}">
+        </div>
+        <br>
+        <div class="form-cmp">
+            <input type="text" placeholder="سال تحصیلی" style="text-align: right" name="academic_year" value="{{ academic_year }}" required>
+        </div>
+        <br>
+        <div class="form-cmp">
+            <input type="text" placeholder="نیم سال" style="text-align: right" name="semester" value="{{ semester }}" required>
+        </div>
+        <br>
+        <div class="form-cmp">
+            <input type="text" placeholder="دانشجو" style="text-align: right" name="student" value="{{ student }}">
+        </div>
+        <br>
+        <div class="form-cmp">
+            <textarea style="width: 90%;margin: 1% 5%;border-radius: 25px;text-align: right" rows="8" name="summary" placeholder="خلاصه پروپوزال" required></textarea>
             <br>
-            <button class="maker-btn">
-                ایجاد
-            </button>
         </div>
         <br>
-        <div class="form-cmp">
-            <h6>
-                افزودن عکس
-            </h6>
-            <input type="file" id="inputGroupFile01">
-            <button class="maker-btn">
-                ایجاد
-            </button>
-        </div>
 
-        <br><br>
-
-        <h3>
-            پیش نمایش
-        </h3>
         <br>
+        <button class="maker-btn">
+              ثبت پروپوزال
+         </button>
 
-        {% for i in list %}
-            {% if var1 %}
-                <div class="p-title">
-
-                </div>
-            {% elif var2 %}
-                 <div class="p-paragraph">
-
-                 </div>
-            {% elif var3 %}
-                 <div class="p-image">
-
-                 </div>
-            {% endif %}
-        {% endfor %}
-
-        <div class="p-title">
-            <h3>
-                عنوان
-            </h3>
-        </div>
-        <div class="p-paragraph">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent metus erat, fringilla nec ex id, rhoncus gravida erat. Aenean placerat arcu a magna laoreet volutpat. Donec gravida dignissim odio, a tincidunt tellus convallis in. Nam auctor suscipit ex, et laoreet diam tempor a. Etiam eget enim volutpat, tristique nisi non, suscipit dolor.
-            </p>
-        </div>
-        <div class="p-image">
-
-        </div>
-
-    </div>
+    </form>
 {% endblock %}

@@ -9,58 +9,77 @@
 
         <br>
 
-        {% for i in list %}
-            {% if var1 %}
-                <div class="p-title">
+        <table class="table table-striped" style="width: 90%;margin: 0px 5%;background: white;border: 1px solid white;color: #1b1b1b">
+              <tr>
+                <th style="color: black">
+                    عنوان
+                </th>
+              </tr>
+              <tr>
+                <td style="color: black">
+                    پروپوزال
+                </td>
+              </tr>
+        </table>
+        <table class="table table-striped" style="width: 90%;margin: 0px 5%;background: white;border: 1px solid white">
+              <tr>
+                <th style="color: black">
+                    سال تحصیلی
+                </th>
+                <th style="color: black">
+                    نیم سال
+                </th>
+              </tr>
+              <tr>
+                <td style="color: black">
+                    1400
+                </td>
+                <td style="color: black">
+                    2
+                </td>
+              </tr>
 
-                </div>
-            {% elif var2 %}
-                 <div class="p-paragraph">
+        </table>
+        <table class="table table-striped" style="width: 90%;margin: 0px 5%;background: white;border: 1px solid white">
+              <tr>
+                <th style="color: black">
+                    استاد راهنما
+                </th>
+                <th style="color: black">
+                    دانشجویان
+                </th>
+              </tr>
+              <tr>
+                <td style="color: black">
+                    استاد {{ supervisor }}
+                </td>
+                <td style="color: black">
+                    دانشجویان {{ student }}
+                </td>
+              </tr>
 
-                 </div>
-            {% elif var3 %}
-                 <div class="p-image">
+        </table>
+        <table class="table table-striped" style="width: 90%;margin: 0px 5%;background: white;border: 1px solid white">
+              <tr>
+                <th style="color: black">
+                    خلاصه
+                </th>
+              </tr>
+              <tr>
+                <td style="color: black;text-align: right;padding: 3%">
+                     {{ summary }}
 
-                 </div>
-            {% endif %}
-        {% endfor %}
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat tempor sem, ac mollis dui sagittis non. Nam porta quam eget metus aliquam, at hendrerit erat sagittis. Vestibulum quis finibus tellus. Fusce at dolor dictum, placerat mi sit amet, viverra purus. Ut maximus scelerisque tristique. Sed auctor fermentum massa, nec scelerisque risus pharetra quis. Praesent eu odio congue dui faucibus mattis ac sit amet elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In placerat nunc vel ultricies imperdiet. Curabitur tincidunt urna lectus, vitae dictum augue venenatis vel.
 
-        <div class="p-title">
-            <h3>
-                عنوان 1
-            </h3>
-        </div>
-        <div class="p-paragraph">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent metus erat, fringilla nec ex id, rhoncus gravida erat. Aenean placerat arcu a magna laoreet volutpat. Donec gravida dignissim odio, a tincidunt tellus convallis in. Nam auctor suscipit ex, et laoreet diam tempor a. Etiam eget enim volutpat, tristique nisi non, suscipit dolor.
-            </p>
-        </div>
-        <div class="p-title">
-            <h3>
-                عنوان 2
-            </h3>
-        </div>
-        <div class="p-paragraph">
-            <p>
-                    Maecenas dignissim iaculis elementum. Suspendisse luctus ligula a sem interdum, eu feugiat arcu eleifend. Proin rhoncus rutrum arcu, at finibus turpis facilisis at. Fusce ultricies turpis et mauris volutpat, a volutpat magna venenatis. Cras nec purus consequat, volutpat velit id, fermentum eros. Nullam vel mattis odio. Vestibulum et ullamcorper magna, sit amet porttitor lacus. Nullam nibh risus, luctus ut laoreet euismod, consectetur non nisi. Aenean iaculis commodo odio, a accumsan nibh commodo non. Nam metus dolor, ornare a interdum at, eleifend vitae est. Praesent eget nunc enim. Quisque in vulputate sem. Morbi interdum, neque hendrerit vehicula sollicitudin, turpis massa feugiat metus, a ullamcorper turpis nunc ut nulla. Cras dignissim posuere risus, vitae condimentum velit rhoncus eu.
-            </p>
-        </div>
+                    Praesent euismod in sem vulputate ornare. Duis dictum velit dolor, at feugiat ligula porttitor sit amet. Maecenas sed lectus ut nunc efficitur aliquet. Morbi quis orci tempor ligula vehicula commodo. Phasellus elit mauris, faucibus eget metus eget, feugiat posuere purus. Phasellus accumsan sit amet leo non consectetur. Proin egestas metus risus, nec molestie urna suscipit sed. Maecenas in porta dolor. Phasellus et dictum elit, vitae tempor ante. Suspendisse quis sapien ultricies nisl dignissim varius in in dolor.
 
-        <div class="p-image">
+                    Nulla facilisi. Nunc volutpat lacinia placerat. Mauris vitae faucibus lorem. In hac habitasse platea dictumst. Maecenas et nisl odio. Nam eget finibus velit. Ut eget rhoncus est. Nunc vitae volutpat lectus. Nunc scelerisque mattis tincidunt. Nam vehicula dictum diam, et ultrices nisl laoreet at. Pellentesque suscipit at risus et pretium. Nunc eu hendrerit dui, ac scelerisque sapien.
+                </td>
+              </tr>
 
-        </div>
+        </table>
 
-        {% if var1 %}
-            <button class="maker-btn">
-              submit proposal
-            </button>
-        {% else %}
-
-        {% endif %}
     <br>
-        <button class="maker-btn">
-              submit proposal
-         </button>
 
     </div>
 {% endblock %}
