@@ -1,7 +1,7 @@
 {% extends 'document/base.html' %}
 {% load static %}
 {% block content %}
-    <form style="text-align: center" class="main-bg" method="post" action="/your-url/" >
+    <form style="text-align: center" class="main-bg" method="post" action={% url 'submit_proposal' %}>{% csrf_token %}
 
         <h3>
             ساخت پروپوزال
@@ -13,19 +13,19 @@
         </div>
         <br>
         <div class="form-cmp">
-            <input type="text" placeholder="نام استاد راهنما" style="text-align: right" name="supervisor" value="{{ supervisor }}">
+            <input type="text" placeholder="نام استاد راهنما" style="text-align: right" name="supervisor">
         </div>
         <br>
         <div class="form-cmp">
-            <input type="text" placeholder="سال تحصیلی" style="text-align: right" name="academic_year" value="{{ academic_year }}" required>
+            <input type="text" placeholder="سال تحصیلی" style="text-align: right" name="academic_year" required>
         </div>
         <br>
         <div class="form-cmp">
-            <input type="text" placeholder="نیم سال" style="text-align: right" name="semester" value="{{ semester }}" required>
+            <input type="text" placeholder="نیم سال" style="text-align: right" name="semester" required>
         </div>
         <br>
         <div class="form-cmp">
-            <input type="text" placeholder="دانشجو" style="text-align: right" name="student" value="{{ student }}">
+            <input type="text" placeholder="دانشجو" style="text-align: right" name="student">
         </div>
         <br>
         <div class="form-cmp">
@@ -35,7 +35,7 @@
         <br>
 
         <br>
-        <button class="maker-btn">
+        <button class="maker-btn" type="submit">
               ثبت پروپوزال
          </button>
 
