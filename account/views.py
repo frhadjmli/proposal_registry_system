@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.http.response import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from document.models import Proposal
 """
 آن دسته از ویوو های که اضافه کامنت گذاری شدن فعلا در اولویت نیستند
 """
@@ -35,7 +36,9 @@ def login_user(request):
 
 
 def student_profile(request):
-    return render(request, 'account/student_profile.html')
+    proposal = Proposal.objects.filter(student__user=request.user)
+    print(proposal)
+    return render(request, 'account/student_profile.html', {'proposal': proposal})
 
 
 def logout_user(request):

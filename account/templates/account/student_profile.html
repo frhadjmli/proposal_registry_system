@@ -46,7 +46,11 @@
         </h2>
         <br><br>
         <div class="proposal">
-            proposal 1
+            {% for prop in proposal %}
+                <h3>{{ prop.title }}</h3>
+            {% empty %}
+                <h3>پروپوزالی ندارید</h3>
+            {% endfor %}
         </div>
         <br><br>
     </div>
