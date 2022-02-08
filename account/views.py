@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.http.response import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+from .decorators import student_required, supervisor_required, hod_required, dprt_admin_required
 from document.models import Proposal
 """
 آن دسته از ویوو های که اضافه کامنت گذاری شدن فعلا در اولویت نیستند
@@ -35,6 +38,8 @@ def login_user(request):
     return render(request, 'account/login.html')
 
 
+@student_required
+@login_required
 def student_profile(request):
     proposal = Proposal.objects.filter(student__user=request.user)
     print(proposal)
@@ -52,26 +57,36 @@ def logout_user(request):
 
 
 # با زدن دکمه ایجاد گروه به اینجا درخواست میزنیم
+@student_required
+@login_required
 def group_up(request):
     return render(request, 'account/group_up.html')
 
 
 # با زدن دکمه لیست اساتید به اینجا ریکویست میزنیم
+@student_required
+@login_required
 def supervisors_list(request):
     return render(request, 'account/supervisors_list.html')
 
 
 # در صفحه لاگین اگر نوع کاربر استاد راهنما باشد به این صفحه درخواست میزنیم
+@supervisor_required
+@login_required
 def supervisor_profile(request):
     return render(request, 'account/supervisor_profile.html')
 
 
 # اگر نوع کاربر پس از درخواست در صفحه لاگین مدیر گروه باشد به این صفحه ریکویست میدهیم
+@hod_required
+@login_required
 def hod_profile(request):
     return render(request, 'account/hod_profile.html')
 
 
 # با کلیک بر روی نام استادها در لیست اساتید با این ریکوعست صفحه پیش نمایش پروفایل استاد را میگیریم
+@student_required
+@login_required
 def req_to_lecturer(request):  # اضافه
     return render(request, 'account/req_to_lecturer.html')
 
