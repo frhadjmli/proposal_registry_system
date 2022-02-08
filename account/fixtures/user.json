@@ -9,8 +9,8 @@
       "last_name": "Andraud",
       "email": "randraud0@linkedin.com",
       "user_type": "ST",
-      "is_staff": true,
-      "is_active": false,
+      "is_staff": false,
+      "is_active": true,
       "date_joined": "2021-07-11"
     }
   },
@@ -25,7 +25,7 @@
       "email": "swrightem1@cdc.gov",
       "user_type": "ST",
       "is_staff": false,
-      "is_active": false,
+      "is_active": true,
       "date_joined": "2020-10-13"
     }
   },
@@ -39,8 +39,8 @@
       "last_name": "Privost",
       "email": "aprivost2@tuttocitta.it",
       "user_type": "ST",
-      "is_staff": true,
-      "is_active": false,
+      "is_staff": false,
+      "is_active": true,
       "date_joined": "2018-05-01"
     }
   },
@@ -54,7 +54,7 @@
       "last_name": "Audenis",
       "email": "kaudenis3@instagram.com",
       "user_type": "ST",
-      "is_staff": true,
+      "is_staff": false,
       "is_active": true,
       "date_joined": "2020-04-04"
     }
@@ -84,7 +84,7 @@
       "last_name": "Vlasin",
       "email": "nvlasin5@mapy.cz",
       "user_type": "ST",
-      "is_staff": true,
+      "is_staff": false,
       "is_active": true,
       "date_joined": "2020-11-23"
     }
@@ -100,7 +100,7 @@
       "email": "dscholig6@walmart.com",
       "user_type": "ST",
       "is_staff": false,
-      "is_active": false,
+      "is_active": true,
       "date_joined": "2019-05-06"
     }
   },
@@ -115,7 +115,7 @@
       "email": "ereedshaw7@time.com",
       "user_type": "ST",
       "is_staff": false,
-      "is_active": false,
+      "is_active": true,
       "date_joined": "2018-03-24"
     }
   },
@@ -129,7 +129,7 @@
       "last_name": "Karlmann",
       "email": "ckarlmann8@blinklist.com",
       "user_type": "ST",
-      "is_staff": true,
+      "is_staff": false,
       "is_active": true,
       "date_joined": "2019-03-31"
     }
@@ -144,7 +144,7 @@
       "last_name": "Skellon",
       "email": "askellon9@t-online.de",
       "user_type": "ST",
-      "is_staff": true,
+      "is_staff": false,
       "is_active": true,
       "date_joined": "2021-04-26"
     }
@@ -159,8 +159,8 @@
       "last_name": "McClory",
       "email": "lmcclorya@guardian.co.uk",
       "user_type": "ST",
-      "is_staff": true,
-      "is_active": false,
+      "is_staff": false,
+      "is_active": true,
       "date_joined": "2018-10-02"
     }
   },
@@ -174,8 +174,8 @@
       "last_name": "Cauthra",
       "email": "mcauthrab@sun.com",
       "user_type": "ST",
-      "is_staff": true,
-      "is_active": false,
+      "is_staff": false,
+      "is_active": true,
       "date_joined": "2018-02-16"
     }
   },
@@ -189,7 +189,7 @@
       "last_name": "Pharo",
       "email": "dpharoc@aboutads.info",
       "user_type": "ST",
-      "is_staff": true,
+      "is_staff": false,
       "is_active": true,
       "date_joined": "2020-10-05"
     } 
@@ -219,8 +219,8 @@
       "last_name": "Fischer",
       "email": "nfischere@elegantthemes.com",
       "user_type": "ST",
-      "is_staff": true,
-      "is_active": false,
+      "is_staff": false,
+      "is_active": true,
       "date_joined": "2019-01-11"
     }
   },
@@ -234,7 +234,7 @@
       "last_name": "Hort",
       "email": "fhortf@wufoo.com",
       "user_type": "SU",
-      "is_staff": true,
+      "is_staff": false,
       "is_active": true,
       "date_joined": "2019-05-15"
     }
@@ -249,8 +249,8 @@
       "last_name": "MacNockater",
       "email": "jmacnockaterg@ning.com",
       "user_type": "SU",
-      "is_staff": true,
-      "is_active": false,
+     "is_staff": false,
+      "is_active": true,
       "date_joined": "2021-05-19"
     }
   },
@@ -264,7 +264,7 @@
       "last_name": "Lardiner",
       "email": "wlardinerh@tripod.com",
       "user_type": "SU",
-      "is_staff": true,
+     "is_staff": false,
       "is_active": true,
       "date_joined": "2021-05-06"
     }
@@ -280,7 +280,7 @@
       "email": "arosei@amazonaws.com",
       "user_type": "SU",
       "is_staff": false,
-      "is_active": false,
+      "is_active": true,
       "date_joined": "2019-03-07"
     }
   },

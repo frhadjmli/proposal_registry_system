@@ -5,14 +5,16 @@ get all the data and save it in DB."""
 from django.shortcuts import render
 from django.http import HttpResponse
 from document.models import Proposal
-from account.models import Student, Supervisor
+from account.models import Student, Supervisor, User
 from django.views.decorators.csrf import csrf_exempt
 from document.forms import ProposalForm
 from django.core.exceptions import ValidationError
+from django.contrib.auth.decorators import login_required
+from account.decorators import student_required
 
 
-
-# Create your views here.
+@student_required
+@login_required
 def submit_proposal(request):
     if request.method == 'GET':
         return render(request, 'document/proposal_maker.html')
@@ -58,8 +60,23 @@ def submit_proposal(request):
             response = "Proposal failed to add in database!"
             return HttpResponse(response)
 
+
+# با زدن دکمه ساخت پروپوزال و ارسال این ریکوعست صفحه ساخت پروپوزال را باز میکنیم
+@student_required
+@login_required
+def proposal_maker(request):
+    return render(request, 'document/proposal_maker.html')
+
+
 # با کلیک بر روی نمایش پروپوزال با این ویوو پروپوزال نمایش داده میشود ولی دکمه سابمیت فقط برای دانشجو بر حسب شرط می آید
-def view_proposal(request):
-    return render(request, 'document/view_proposal.html')
+@student_required
+@login_required
+def view_proposal(request, pk):
+    proposal = Proposal.objects.get(pk=pk)
+    student_id = Proposal.objects.get(pk=pk).student.all()
+    student = User.objects.filter(id__in=student_id)
+    supervisor_id = Proposal.objects.get(pk=pk).supervisor.all()
+    supervisor = User.objects.filter(id__in=supervisor_id)
+    return render(request, 'document/view_proposal.html', {'proposal': proposal, 'student': student, 'supervisor': supervisor})
 
 
