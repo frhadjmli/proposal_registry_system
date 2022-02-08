@@ -17,7 +17,7 @@
               </tr>
               <tr>
                 <td style="color: black">
-                    پروپوزال
+                    {{ proposal.title }}
                 </td>
               </tr>
         </table>
@@ -32,10 +32,10 @@
               </tr>
               <tr>
                 <td style="color: black">
-                    1400
+                    {{ proposal.academic_year }}
                 </td>
                 <td style="color: black">
-                    2
+                    {{ proposal.semester }}
                 </td>
               </tr>
 
@@ -51,10 +51,18 @@
               </tr>
               <tr>
                 <td style="color: black">
-                    استاد {{ supervisor }}
+                    {% for su in supervisor %}
+                      {{ su.get_full_name }}<br>
+                    {% empty %}
+                      استادی وجود ندارد. با آموزش تماس بگیرید.
+                    {% endfor %}
                 </td>
                 <td style="color: black">
-                    دانشجویان {{ student }}
+                    {% for stu in student %}
+                      {{ stu.get_full_name }}<br>
+                    {% empty %}
+                      دانشجویی وجود ندارد. با آموزش تماس بگیرید.
+                    {% endfor %}
                 </td>
               </tr>
 
@@ -67,13 +75,7 @@
               </tr>
               <tr>
                 <td style="color: black;text-align: right;padding: 3%">
-                     {{ summary }}
-
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat tempor sem, ac mollis dui sagittis non. Nam porta quam eget metus aliquam, at hendrerit erat sagittis. Vestibulum quis finibus tellus. Fusce at dolor dictum, placerat mi sit amet, viverra purus. Ut maximus scelerisque tristique. Sed auctor fermentum massa, nec scelerisque risus pharetra quis. Praesent eu odio congue dui faucibus mattis ac sit amet elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In placerat nunc vel ultricies imperdiet. Curabitur tincidunt urna lectus, vitae dictum augue venenatis vel.
-
-                    Praesent euismod in sem vulputate ornare. Duis dictum velit dolor, at feugiat ligula porttitor sit amet. Maecenas sed lectus ut nunc efficitur aliquet. Morbi quis orci tempor ligula vehicula commodo. Phasellus elit mauris, faucibus eget metus eget, feugiat posuere purus. Phasellus accumsan sit amet leo non consectetur. Proin egestas metus risus, nec molestie urna suscipit sed. Maecenas in porta dolor. Phasellus et dictum elit, vitae tempor ante. Suspendisse quis sapien ultricies nisl dignissim varius in in dolor.
-
-                    Nulla facilisi. Nunc volutpat lacinia placerat. Mauris vitae faucibus lorem. In hac habitasse platea dictumst. Maecenas et nisl odio. Nam eget finibus velit. Ut eget rhoncus est. Nunc vitae volutpat lectus. Nunc scelerisque mattis tincidunt. Nam vehicula dictum diam, et ultrices nisl laoreet at. Pellentesque suscipit at risus et pretium. Nunc eu hendrerit dui, ac scelerisque sapien.
+                    {{ proposal.summary }}
                 </td>
               </tr>
 

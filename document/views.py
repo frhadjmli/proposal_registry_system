@@ -5,7 +5,7 @@ get all the data and save it in DB."""
 from django.shortcuts import render
 from django.http import HttpResponse
 from document.models import Proposal
-from account.models import Student, Supervisor
+from account.models import Student, Supervisor, User
 from django.views.decorators.csrf import csrf_exempt
 from document.forms import ProposalForm
 from django.core.exceptions import ValidationError
@@ -71,7 +71,12 @@ def proposal_maker(request):
 # با کلیک بر روی نمایش پروپوزال با این ویوو پروپوزال نمایش داده میشود ولی دکمه سابمیت فقط برای دانشجو بر حسب شرط می آید
 @student_required
 @login_required
-def view_proposal(request):
-    return render(request, 'document/view_proposal.html')
+def view_proposal(request, pk):
+    proposal = Proposal.objects.get(pk=pk)
+    student_id = Proposal.objects.get(pk=pk).student.all()
+    student = User.objects.filter(id__in=student_id)
+    supervisor_id = Proposal.objects.get(pk=pk).supervisor.all()
+    supervisor = User.objects.filter(id__in=supervisor_id)
+    return render(request, 'document/view_proposal.html', {'proposal': proposal, 'student': student, 'supervisor': supervisor})
 
 
