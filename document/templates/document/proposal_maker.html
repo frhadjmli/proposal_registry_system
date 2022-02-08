@@ -1,6 +1,7 @@
 {% extends 'document/base.html' %}
 {% load static %}
 {% block content %}
+    <div class="validation-error">{{msg}}</div>
     <form style="text-align: center" class="main-bg" method="post" action={% url 'submit_proposal' %}>{% csrf_token %}
 
         <h3>
