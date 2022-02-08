@@ -74,7 +74,9 @@ def supervisors_list(request):
 @supervisor_required
 @login_required
 def supervisor_profile(request):
-    return render(request, 'account/supervisor_profile.html')
+    full_name = request.user.get_full_name()
+    proposal = Proposal.objects.filter(supervisor__user=request.user)
+    return render(request, 'account/supervisor_profile.html', {'full_name': full_name, 'proposal': proposal})
 
 
 # اگر نوع کاربر پس از درخواست در صفحه لاگین مدیر گروه باشد به این صفحه ریکویست میدهیم
