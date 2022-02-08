@@ -7,16 +7,13 @@ def student_required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, log
     Decorator for views that checks that the logged in user is a student,
     redirects to the log-in page if necessary.
     """
-    print("ffffffffffffffff")
     actual_decorator = user_passes_test(
         lambda user: user.is_active and user.user_type == 'ST',
         login_url=login_url,
         redirect_field_name=redirect_field_name
     )
     if function:
-        print("iiiiiiiiiiiiiiiiiii")
         return actual_decorator(function)
-    print("ooooooooooooooooooooooooo")
     return actual_decorator
 
 
