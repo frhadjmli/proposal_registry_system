@@ -2,11 +2,10 @@
 'submit_proposal(request)' is responsible for showing the proposal form to the student and also
 get all the data and save it in DB."""
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from document.models import Proposal
 from account.models import Student, Supervisor, User
-from django.views.decorators.csrf import csrf_exempt
 from document.forms import ProposalForm
 from django.core.exceptions import ValidationError
 from django.contrib.auth.decorators import login_required
@@ -30,8 +29,6 @@ def submit_proposal(request):
             supervisors_fullnames = request.POST.get('supervisor')
             students_fullnames = request.POST.get('student')
            
-            
-            
             for fullname in supervisors_fullnames.split('-'):
                 # supervisor = Supervisor.objects.get(user__get_full_name=fullname)
                 supervisors = Supervisor.objects.all()
@@ -51,14 +48,11 @@ def submit_proposal(request):
             form = ProposalForm(user_data)
             if form.is_valid():
                 form.save()
-                response = "Proposal added Successfully to database."
-                return HttpResponse(response)
+                return redirect('student_profile')
             else:
-                response = "Proposal form is not valid!"
-                return HttpResponse(response)
+                return render(request, 'document/proposal_maker.html', {'msg':"فرم داری مقادیر نامعتبر است."})
         except ValidationError:
-            response = "Proposal failed to add in database!"
-            return HttpResponse(response)
+            return render(request, 'document/proposal_maker.html', {'msg':"اشتباهی رخ داده است، لطفا دوباره تلاش نمایید."})
 
 # با کلیک بر روی نمایش پروپوزال با این ویوو پروپوزال نمایش داده میشود ولی دکمه سابمیت فقط برای دانشجو بر حسب شرط می آید
 @student_required
