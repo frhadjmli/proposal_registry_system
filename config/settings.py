@@ -30,6 +30,14 @@ ALLOWED_HOSTS = []
 # Custom User Model
 AUTH_USER_MODEL = 'account.User'
 
+LOGIN_URL = 'login'
+
+LOGOUT_URL = 'logout'
+
+LOGIN_REDIRECT_URL = 'account/login'
+
+LOGOUT_REDIRECT_URL = 'account/logout'
+
 # Application definition
 
 INSTALLED_APPS = [
