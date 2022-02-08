@@ -47,7 +47,9 @@
         <br><br>
         <div class="proposal">
             {% for prop in proposal %}
-                <h3>{{ prop.title }}</h3>
+                <a style="color: #1C2126" href="{% url 'view_proposal' prop.pk %}">
+                    <h3>{{ prop.title }}</h3>
+                </a>
             {% empty %}
                 <h3>پروپوزالی ندارید</h3>
             {% endfor %}
