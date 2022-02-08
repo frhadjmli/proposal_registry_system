@@ -55,13 +55,12 @@ def submit_proposal(request):
             return render(request, 'document/proposal_maker.html', {'msg':"اشتباهی رخ داده است، لطفا دوباره تلاش نمایید."})
 
 # با کلیک بر روی نمایش پروپوزال با این ویوو پروپوزال نمایش داده میشود ولی دکمه سابمیت فقط برای دانشجو بر حسب شرط می آید
-@student_required
 @login_required
 def view_proposal(request, pk):
     proposal = Proposal.objects.get(pk=pk)
-    student_id = Proposal.objects.get(pk=pk).student.all()
+    student_id = Proposal.objects.get(pk=pk).student.values_list('user_id', flat=True)
     student = User.objects.filter(id__in=student_id)
-    supervisor_id = Proposal.objects.get(pk=pk).supervisor.all()
+    supervisor_id = Proposal.objects.get(pk=pk).supervisor.values_list('user_id', flat=True)
     supervisor = User.objects.filter(id__in=supervisor_id)
     return render(request, 'document/view_proposal.html', {'proposal': proposal, 'student': student, 'supervisor': supervisor})
 
