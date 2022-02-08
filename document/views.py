@@ -9,10 +9,12 @@ from account.models import Student, Supervisor
 from django.views.decorators.csrf import csrf_exempt
 from document.forms import ProposalForm
 from django.core.exceptions import ValidationError
+from django.contrib.auth.decorators import login_required
+from account.decorators import student_required
 
 
-
-# Create your views here.
+@student_required
+@login_required
 def submit_proposal(request):
     if request.method == 'GET':
         return render(request, 'document/proposal_maker.html')
@@ -60,11 +62,15 @@ def submit_proposal(request):
 
 
 # با زدن دکمه ساخت پروپوزال و ارسال این ریکوعست صفحه ساخت پروپوزال را باز میکنیم
+@student_required
+@login_required
 def proposal_maker(request):
     return render(request, 'document/proposal_maker.html')
 
 
 # با کلیک بر روی نمایش پروپوزال با این ویوو پروپوزال نمایش داده میشود ولی دکمه سابمیت فقط برای دانشجو بر حسب شرط می آید
+@student_required
+@login_required
 def view_proposal(request):
     return render(request, 'document/view_proposal.html')
 
