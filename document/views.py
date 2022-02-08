@@ -58,6 +58,12 @@ def submit_proposal(request):
             response = "Proposal failed to add in database!"
             return HttpResponse(response)
 
+
+# با زدن دکمه ساخت پروپوزال و ارسال این ریکوعست صفحه ساخت پروپوزال را باز میکنیم
+def proposal_maker(request):
+    return render(request, 'document/proposal_maker.html')
+
+
 # با کلیک بر روی نمایش پروپوزال با این ویوو پروپوزال نمایش داده میشود ولی دکمه سابمیت فقط برای دانشجو بر حسب شرط می آید
 def view_proposal(request):
     return render(request, 'document/view_proposal.html')
