@@ -22,8 +22,9 @@
                 </h6>
             </div>
             <br><br>
-            <div class="proposal" style="width: 70%;margin: 0 15%">
+
                 {% for prop in proposal %}
+             <div class="proposal" style="width: 70%;margin: 0 15%">
                     <div class="row row-cols-3">
                         <div class="col" style="width: 10%">
                             <a href="#" style="color: white">
@@ -51,10 +52,11 @@
                             <h3>{{ prop.title }}</h3>
                         </div>
                     </div>
+              </div>
                 {% empty %}
                     <h3>پروپوزالی ندارید</h3>
                 {% endfor %}
-            </div>
+
         </div>
         <div class="col" style="width: 20%;text-align: center;background: #0F8881;padding: 0">
             <div class="students-list">
