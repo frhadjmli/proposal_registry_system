@@ -58,10 +58,8 @@ def submit_proposal(request):
 @login_required
 def view_proposal(request, pk):
     proposal = Proposal.objects.get(pk=pk)
-    student_id = Proposal.objects.get(pk=pk).student.values_list('user_id', flat=True)
-    student = User.objects.filter(id__in=student_id)
-    supervisor_id = Proposal.objects.get(pk=pk).supervisor.values_list('user_id', flat=True)
-    supervisor = User.objects.filter(id__in=supervisor_id)
+    student = proposal.student.select_related('user')
+    supervisor = proposal.supervisor.select_related('user')
     return render(request, 'document/view_proposal.html', {'proposal': proposal, 'student': student, 'supervisor': supervisor})
 
 
