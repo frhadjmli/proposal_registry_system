@@ -52,14 +52,14 @@
               <tr>
                 <td style="color: black">
                     {% for su in supervisor %}
-                      {{ su.get_full_name }}<br>
+                      {{ su.full_name }}<br>
                     {% empty %}
                       استادی وجود ندارد. با آموزش تماس بگیرید.
                     {% endfor %}
                 </td>
                 <td style="color: black">
                     {% for stu in student %}
-                      {{ stu.get_full_name }}<br>
+                      {{ stu.full_name }}<br>
                     {% empty %}
                       دانشجویی وجود ندارد. با آموزش تماس بگیرید.
                     {% endfor %}
