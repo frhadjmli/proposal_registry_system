@@ -9,7 +9,7 @@ from account.models import Student, Supervisor, User
 from document.forms import ProposalForm
 from django.core.exceptions import ValidationError
 from django.contrib.auth.decorators import login_required
-from account.decorators import student_required
+from account.decorators import student_required, supervisor_required
 
 
 @student_required
@@ -62,4 +62,12 @@ def view_proposal(request, pk):
     supervisor = proposal.supervisor.select_related('user')
     return render(request, 'document/view_proposal.html', {'proposal': proposal, 'student': student, 'supervisor': supervisor})
 
+@login_required
+@supervisor_required
+def accept_proposal(request):
+    pass
 
+@login_required
+@supervisor_required
+def reject_proposal(request):
+    pass
