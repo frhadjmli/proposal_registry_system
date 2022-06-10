@@ -43,6 +43,7 @@ class Supervisor(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     academic_rank = models.CharField(max_length=3, choices=AcademicRankChoice.choices)
     working_area = models.CharField(max_length=100, null=True)
+    capacity = models.PositiveIntegerField(null=True)
 
     def __str__(self):
         return self.user.get_full_name()
