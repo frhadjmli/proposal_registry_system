@@ -4,6 +4,8 @@ from django.http.response import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+
+from account.models import User, Supervisor
 from .decorators import student_required, supervisor_required, hod_required, dprt_admin_required
 from document.models import Proposal
 """
@@ -67,7 +69,9 @@ def group_up(request):
 @student_required
 @login_required
 def supervisors_list(request):
-    return render(request, 'account/supervisors_list.html')
+    supervisors = Supervisor.objects.select_related('user')
+    print(supervisors)
+    return render(request, 'account/supervisors_list.html', {'supervisors':supervisors})
 
 
 # در صفحه لاگین اگر نوع کاربر استاد راهنما باشد به این صفحه درخواست میزنیم
