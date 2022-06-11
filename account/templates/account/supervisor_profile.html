@@ -1,7 +1,7 @@
 {% extends 'account/base.html' %}
 {% load static %}
 {% block content %}
-   <ul class="nav-ul">
+    <ul class="nav-ul" xmlns="http://www.w3.org/1999/html">
       <li><a class="nav-a" href="#home">
          <svg xmlns="http://www.w3.org/2000/svg" width="50%" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
           <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
@@ -28,20 +28,26 @@
                     <div class="row row-cols-3">
                         <div class="col" style="width: 10%">
                             <a href="#" style="color: white">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15%" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15%" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16" color="#FF1414">
                                   <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
                                 </svg>
                             </a>
                         </div>
                         <div class="col" style="width: 10%">
-                            <a href="#" style="color: white">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15%" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                            <a href="{% url 'accept_proposal' prop.pk %}" style="color: white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15%" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16"  {% if prop.status == 'asup' %}
+
+                                                                                                                                                                    color="#32FF0A"
+                                                                                                                                                             {% else %}
+                                                                                                                                                                    color="white"
+
+                                                                                                                                                             {% endif %}>
                                   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
                                 </svg>
                             </a>
                         </div>
                         <div class="col" style="width: 10%">
-                            <a href={% url 'view_proposal' prop.pk %} style="color: white">
+                            <a href="{% url 'view_proposal' prop.pk %}" style="color: white">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="15%" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                   <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
                                   <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
