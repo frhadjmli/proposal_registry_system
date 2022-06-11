@@ -45,13 +45,27 @@
             لیست پروپوزال ها
         </h2>
         <br><br>
-
-
             {% for prop in proposal %}
                 <div class="proposal">
                 <a style="color: #1C2126" href="{% url 'view_proposal' prop.pk %}">
                     <h3>{{ prop.title }}</h3>
                 </a>
+                <h6>{% if prop.status == 'pen'%}
+                        در حال بررسی !
+                    {% elif prop.status == 'rsup'%}
+                        پروپزال توسط استاد راهنما پذیرفته نشده است !
+                    {% elif prop.status == 'asup'%}
+                        پروپزال توسط استاد راهنما پذیرفته شده است !
+                    {% elif prop.status == 'radm'%}
+                        پروپزال توسط کارشناس پذیرفته نشده است !
+                    {% elif prop.status == 'aadm'%}
+                        پروپزال توسط کارشناس پذیرفته شده است !
+                    {% elif prop.status == 'rhod'%}
+                        پروپزال توسط مدیر گروه پذیرفته نشده است !
+                    {% elif prop.status == 'ahod'%}
+                        پروپزال توسط مدیر گروه پذیرفته شده است !
+                    {% endif %}
+                </h6>
                 </div>
             {% empty %}
                 <h3>پروپوزالی ندارید</h3>
