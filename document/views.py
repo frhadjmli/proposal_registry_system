@@ -63,9 +63,25 @@ def view_proposal(request, pk):
     return render(request, 'document/view_proposal.html', {'proposal': proposal, 'student': student, 'supervisor': supervisor})
 
 @login_required
-@supervisor_required
-def accept_proposal(request):
-    pass
+def accept_proposal(request, pk):
+
+    proposal_selected = Proposal.objects.get(pk=pk)
+
+    full_name = request.user.get_full_name()
+    proposal = Proposal.objects.filter(supervisor__user=request.user)
+
+    if proposal_selected.status == 'pen':
+        proposal_selected.status = 'asup'  # accepted by supervisor
+        proposal_selected.save()
+    elif proposal_selected.status == 'asup':
+        proposal_selected.status = 'pen'  # pending
+        proposal_selected.save()
+
+    return render(request, 'account/supervisor_profile.html', {'full_name': full_name, 'proposal': proposal,})
+
+
+
+
 
 @login_required
 @supervisor_required
