@@ -88,5 +88,20 @@ def accept_proposal(request, pk):
 
 @login_required
 @supervisor_required
-def reject_proposal(request):
-    pass
+def reject_proposal(request,pk):
+    proposal_selected = Proposal.objects.get(pk=pk)
+
+    full_name = request.user.get_full_name()
+    proposal = Proposal.objects.filter(supervisor__user=request.user)
+
+    if proposal_selected.status == 'pen':
+        proposal_selected.status = 'rsup'  # reject by supervisor
+        proposal_selected.save()
+    elif proposal_selected.status == 'rsup':
+        proposal_selected.status = 'pen'  # pending
+        proposal_selected.save()
+    elif proposal_selected.status == 'asup':
+        proposal_selected.status = 'rsup'  # reject by supervisor
+        proposal_selected.save()
+
+    return render(request, 'account/supervisor_profile.html', {'full_name': full_name, 'proposal': proposal, })
