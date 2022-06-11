@@ -76,6 +76,9 @@ def accept_proposal(request, pk):
     elif proposal_selected.status == 'asup':
         proposal_selected.status = 'pen'  # pending
         proposal_selected.save()
+    elif proposal_selected.status == 'rsup':
+        proposal_selected.status = 'asup'  # accepted by supervisor
+        proposal_selected.save()
 
     return render(request, 'account/supervisor_profile.html', {'full_name': full_name, 'proposal': proposal,})
 
