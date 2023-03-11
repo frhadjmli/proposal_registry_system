@@ -5,6 +5,7 @@ __pycache__
 *$py.class
 
 notes
+config/.env
 
 # C extensions
 *.so
